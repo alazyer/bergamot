@@ -260,7 +260,7 @@ func NewStLogFunc(logger log.StLogger) iris.HandlerFunc {
 // NewStandardLogFunc returns a middleware print function using StandardLogger
 func NewStandardLogFunc(logger log.StandardLogger) iris.HandlerFunc {
 	return func(ctx *iris.Context) {
-		logger.Infof("[%s] - path: %s\tparams: %s", ctx.Method(), ctx.Path(), ctx.ParamsSentence())
+		logger.Infof("alazyer[%s] - path: %s\tparams: %s", ctx.Method(), ctx.Path(), ctx.ParamsSentence())
 		ctx.Next()
 	}
 }
